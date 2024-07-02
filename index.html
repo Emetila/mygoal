@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Goals</title>
+
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <!-- All heading font family (Merriweather) and body font family (Lora) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main data-testid="main-content">
+        <div class="hero">
+            <img data-testid="slackProfilePicture" src="./image/photo_2024-06-16_21-53-24.jpg">
+            <div data-testid="name">
+                <h2 class="name" data-testid="slackDisplayName">Shulammite Ughojo</h2>
+                <div class="container">
+                    <div class="time" data-testid="currentTimeUTC"></div>
+                    <div class="day" data-testid="currentDay"></div>
+                </div>
+                <script>
+                    function updateTime() {
+                        const now = new Date();
+                        const utcTime = now.toISOString().replace('T', ' ').split('.')[0] + ' UTC';
+                        const dayOfWeek = now.toLocaleDateString('en-GB', { weekday: 'long', timeZone: 'UTC' });
+
+                        document.querySelector('[data-testid="currentTimeUTC"]').innerText = `Current Time in UTC: ${utcTime}`;
+                        document.querySelector('[data-testid="currentDay"]').innerText = `Current Day of the week: ${dayOfWeek}`;
+                    }
+
+                    updateTime();
+                    setInterval(updateTime, 1000); // Update every second
+                </script>
+                <div data-testid="slackEmail">
+                    <a class="email" href="mailto:emetila83@gmail.com">emetila83@gmail.com</a>
+                </div>
+                <ul>
+                    <li><a href="https://hng.tech/learn" data-testid="hngLink">HNG Tech Learn</a></li>
+                    <li><a href="https://keyword.dog" data-testid="keywordLink">Keyword Dog</a></li>
+                    <li><a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrape Any Web</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bodySection" data-testid="bodySection">
+            <h1 class="title" data-testid="title">My Tech Goals for the Next 2 Years</h1>
+            <div class="goalsbox" data-testid="goalBox">
+                <div class="goal" data-testid="goal1">
+                    <h2>Improve UI/UX Skills</h2>
+                    <p>Enhance my understanding of user interface and user experience design principles,creating
+                        intuitive
+                        and engaging user interfaces.</p>
+                    <p>Collaborate with designers and stakeholders to understand user needs and translate them into
+                        functional design solutions.</p>
+                </div>
+                <div class="goal" data-testid="goal2">
+                    <h2>Master Modern Web Technologies</h2>
+                    <p>Stay updated with latest frontend frameworks and tools.</p>
+                    <p>Learn advanced CSS features like Flexbox, Grid Layout, CSS Variables, and responsive design
+                        principles.</p>
+                </div>
+                <div class="goal" data-testid="goal3">
+                    <h2>Master CSS Frameworks</h2>
+                    <p>Become proficient in popular CSS frameworks like Bootstrap and Tailwind CSS.</p>
+                </div>
+                <div class="goal" data-testid="goal4">
+                    <h2>Learn JavaScript Frameworks</h2>
+                    <p>Explore and master JavaScript frameworks/libraries like React, Vue.js, or Angular for building
+                        dynamic and interactive user interfaces.</p>
+                    <p>Strengthen proficiency in core JavaScript concepts: ES6+ features, asynchronous programming,
+                        and functional programming paradigms.</p>
+                </div>
+                <div class="goal" data-testid="goal5">
+                    <h2>Build Responsive and Accessible Websites</h2>
+                    <p>Design and develop websites that work seamlessly across various devices and screen sizes.</p>
+                    <p>Ensure accessibility by following WCAG guidelines, improving usability for users with
+                        disabilities.
+                    </p>
+                </div>
+                <div class="goal" data-testid="goal6">
+                    <h2>Enhance Performance Optimization Skills</h2>
+                    <p>Learn techniques for improving website performance: lazy loading, code splitting, minimizing
+                        render-blocking
+                        resources, and optimizing images.</p>
+                    <p>Utilize tools like Lighthouse and WebPageTest to analyze and enhance site performance metrics.
+                    </p>
+                </div>
+                <div class="goal" data-testid="goal7">
+                    <h2>Stay Updated with Industry Trends and Best Practices</h2>
+                    <p>Regularly follow industry blogs, attend conferences, and participate in online communities to
+                        stay
+                        informed about
+                        frontend development trends and best practices.</p>
+                    <p>Experiment with emerging technologies like Progressive Web Apps (PWAs), Web Components, and
+                        serverless architectures.</p>
+                </div>
+                <div class="goal" data-testid="goal8">
+                    <h2>Contribute to Open Source Projects and Collaborate</h2>
+                    <p>Contribute to open source projects to gain practical experience, receive feedback from the
+                        community, and improve coding skills.</p>
+                    <p>Collaborate with peers on projects, participate in code reviews, and share knowledge to foster
+                        personal and collective growth.</p>
+                </div>
+                <div class="goal" data-testid="goal9">
+                    <h2>Create a Personal Portfolio of Projects</h2>
+                    <p>Build a portfolio showcasing frontend projects, demonstrating skills in HTML, CSS,
+                        JavaScript, frameworks, and design principles.</p>
+                    <p>Continuously update and refine the portfolio to reflect growth and proficiency in frontend
+                        development.</p>
+                </div>
+                <div class="goal" data-testid="goal10">
+                    <h2>Set Career Development Goals</h2>
+                    <p>Define career milestones and objectives for advancing as a frontend developer, such as
+                        pursuing certifications, mentorship opportunities, or leadership roles.</p>
+                    <p>Seek feedback, mentorship, and guidance to continually progress and achieve career aspirations
+                        in frontend development.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer data-testid="footer">
+        <p data-testid="footer">Copyright © 2024 Shulammite Ughojo. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background-color: black;
+    padding: 0 40px;
+}
+
+img {
+    width: 300px;
+    height: 400px;
+}
+
+h1, p, h2 {
+    color: white;
+}
+
+svg{
+    fill: white;
+}
+
+.ul li {
+    text-decoration: none;
+}
+
+ul li a, .email {
+    color: white;
+    font-family: "Merriweather", sans-serif;
+}
+
+ul li a:hover {
+    color: bisque;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.goalsbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.goalsbox > * {
+    width:calc(90% / 3);
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.goal {
+    background-color: blueviolet;
+}
+
+.container {
+    padding: 20px 0 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    color: black;
+    font-family: "Merriweather", sans-serif;
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+.time, .day {
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-size: 16px;
+    color: white;
+    font-family: "Merriweather", sans-serif;
+}
+
+.name {
+    font-family: "Lora",sans-serif;
+}
+
+.bodySection .title {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+@media (max-width: 500px) {
+    body {
+        line-height: 1.4;
+        padding: 0 20px;
+    }
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bodySection .title {
+        padding: 2rem 0;
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .goalsbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+    
+    .goalsbox > * {
+        width: 250px;
+        padding: 1rem 1rem;
+    }    
+
+    .goal h2 {
+        font-size: 20px;
+        font-family: "Lora", sans-serif;
+    }
+
+}
